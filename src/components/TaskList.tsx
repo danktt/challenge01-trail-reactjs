@@ -15,11 +15,11 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   function handleCreateNewTask() {
-  if(!newTaskTitle) return;
+  if(!newTaskTitle) return; // Checar se tem algo no campo
 
     const newTask = {
       id: Math.random(),
-      title: newTaskTitle,
+      title: newTaskTitle,  
       isComplete: false
     }
 
@@ -75,7 +75,7 @@ export function TaskList() {
                 </label>
                 <p>{task.title}</p>
               </div>
-
+              {/* Teste */}
               <button type="button" data-testid="remove-task-button" onClick={() => handleRemoveTask(task.id)}>
                 <FiTrash size={16}/>
               </button>
@@ -84,6 +84,9 @@ export function TaskList() {
           
         </ul>
       </main>
+
+
+      
     </section>
   )
 }
